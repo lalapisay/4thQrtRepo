@@ -49,6 +49,11 @@
         border-radius: 15px;
         margin: 0 auto;
     }
+    #movielist{
+        margin-top: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
 </style>
 
 <body>
@@ -60,15 +65,15 @@
             <br><br>
             Year: <input type="number" id ="movieyear" min="1900" max="2024">
             <br><br>
-            Genre: <select>
-                <option id="moviegenre">--Select Genre--</option>
-                <option id="moviegenre">Horror</option>
-                <option id="moviegenre">Romance</option>
-                <option id="moviegenre">Slice of Life</option>
-                <option id="moviegenre">Drama</option>
-                <option id="moviegenre">Comedy</option>
-                <option id="moviegenre">Coming of Age</option>
-            </select>
+            Genre: <select id="moviegenre">
+                    <option>--Select Genre--</option>
+                    <option>Horror</option>
+                    <option>Romance</option>
+                    <option>Slice of Life</option>
+                    <option>Drama</option>
+                    <option>Comedy</option>
+                    <option>Coming of Age</option>
+                </select>
             <br><br>
             Rating:
             <div class="rating">
@@ -84,10 +89,11 @@
                 <label for="rating5">★</label>
             </div>
 
-            <button type="addmovie">Add Movie</button>
+            <button id="addmovie">Add Movie</button>
 
         </form>
     </div>
-
     <div id="movielist"></div>
 </body>
+<script src="../js files/1stgraded.js"></script>
+</html>

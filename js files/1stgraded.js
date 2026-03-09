@@ -1,13 +1,21 @@
+const movielist = document.getElementById("movielist");
+const addmovie = document.getElementById("addmovie");
+if (addmovie) {
+    addmovie.addEventListener("click", function (event) {
+        event.preventDefault();
 
-const moviename=document.getElementById("moviename").value;
-const movieyear=document.getElementById("movieyear").value;
-const moviegenre=document.getElementById("moviegenre").value;
+        const title = document.getElementById("moviename").value;
+        const year = document.getElementById("movieyear").value;
+        const genre = document.getElementById("moviegenre").value;
 
-const movieDetails = document.getElementById("movielist");
+        if (title.trim() !== "" && year.trim() !== "" && genre.trim() !== "" && genre !== "--Select Genre--") {
+            const movieItem = document.createElement("div");
+            movieItem.textContent = `${title} (${year}) - ${genre}`;
+            movielist.appendChild(movieItem);
 
-movieDetails.innerHTML =
-`<h4>Movie Details:</h4>
-document.write("Movie Name: " + moviename.value + "<br>");
-document.write("Movie Year: " + movieyear.value + "<br>");
-document.write("Movie Genre: " + moviegenre.value + "<br>");`;
-
+            document.getElementById("moviename").value = "";
+            document.getElementById("movieyear").value = "";
+            document.getElementById("moviegenre").value = "--Select Genre--";
+        }
+    });
+}
