@@ -49,14 +49,33 @@
         border-radius: 15px;
         margin: 0 auto;
     }
+    .delete{
+        border-radius: 100px;
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+    }
     #movielist{
         margin-top: 20px;
         border-bottom: 1px solid #ccc;
         padding-bottom: 10px;
     }
+    .movie-box {
+        border: 1px solid #818181;
+        border-radius: 2px;
+        background: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    .rating-overall{
+        color:#ebb41d;
+    }
 </style>
 
 <body>
+    <li><a href="../index.html">Home</a></li>
     <div class="container">
         <h3 style="justify-content: center;">Add a Movie</h3>
 
@@ -77,23 +96,25 @@
             <br><br>
             Rating:
             <div class="rating">
-                <input type="radio" id="rating1" name="rating" value="1">
-                <label for="rating1">★</label>
-                <input type="radio" id="rating2" name="rating" value="2">
-                <label for="rating2">★</label>
-                <input type="radio" id="rating3" name="rating" value="3">
-                <label for="rating3">★</label>
-                <input type="radio" id="rating4" name="rating" value="4">
-                <label for="rating4">★</label>
                 <input type="radio" id="rating5" name="rating" value="5">
                 <label for="rating5">★</label>
+                <input type="radio" id="rating4" name="rating" value="4">
+                <label for="rating4">★</label>
+                <input type="radio" id="rating3" name="rating" value="3">
+                <label for="rating3">★</label>
+                <input type="radio" id="rating2" name="rating" value="2">
+                <label for="rating2">★</label>
+                <input type="radio" id="rating1" name="rating" value="1">
+                <label for="rating1">★</label>
             </div>
 
             <button id="addmovie">Add Movie</button>
-
+            <div id="movielist" style="border: none;">
+            </div>
+            </div>
+    
         </form>
-    </div>
-    <div id="movielist"></div>
+    
 </body>
 <script src="../js files/1stgraded.js"></script>
 </html>
