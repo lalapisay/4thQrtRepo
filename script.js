@@ -23,3 +23,4 @@ function plotPoint() {
     else{
       out1.innerHTML = "divisa"
     }
+  } //this is correction 1, missing bracket
