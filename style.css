@@ -47,10 +47,11 @@ nav a :hover {
     width: 400px;
     border: 1px solid black;
 }
-#point { /*--change 5--*/
+#point { 
     height: 10px;
     width: 10px;
     background-color: red;
+    position: absolute;
 }
 .axis {
     position: absolute;
